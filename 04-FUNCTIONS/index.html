@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //function 1 substraction
+     let substraction =(num1, num2) => {
+       return(num1 - num2) ;
+     }
+
+    //function 2 division
+    let division =(num1, num2) => {
+      return(num1 / num2) ;
+    }
+
+    //function 3 multiplication
+    let multiplication =(num1, num2) => {
+      return(num1 * num2) ;
+    }
+
+    //function 4 percentages
+    let percentage =(num1, num2) => {
+      return(num1+"% de "+ num2+" = "+(num1/100) * num2) ;
+    }
+    //function 5 speed
+    let speed =(kilometers, hour) => {
+      return("Speed = "+kilometers/hour+"km/h.") ;
+    }
+
+    console.log(substraction(10, 6));
+    console.log(division(10, 6));
+    console.log(multiplication(10, 6));
+    console.log(percentage(2, 100));
+    console.log(speed(50, 1));
+
+  </script>
+</body>
+</html>

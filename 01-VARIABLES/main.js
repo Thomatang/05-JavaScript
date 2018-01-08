@@ -1,0 +1,9 @@
+// let mac=true;
+// let windows=false; //boolean
+// let age = 23; //number
+// let name = "Dayvid"; //string
+// let something = undefined;
+// let willbechanged = null;
+// let table = {}; //function
+// let basket= [];
+// let doStuff = function (){};
