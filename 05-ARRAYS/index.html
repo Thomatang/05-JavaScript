@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+//     let groceries = ["apples", "blueberries", "tofu", "water", "tea", "broccoli", "rice", "maple syrup"];
+//     console.log(groceries[2]);
+//     for (i=0; i<groceries.length; i++) {
+//       console.log((i+1)+". "+groceries[i]);
+//     }
+//
+//     //forEach method
+//     groceries.forEach((value, iterator) => {
+//       // console.log (value, iterator);
+//     });
+//
+// // add elements in array
+// groceries.push("tomatoes");
+// groceries.unshift("cucumber");
+//
+// //copy array
+// let copyOfGroceries= groceries.slice(); // old
+// let copyofGroceries= [...groceries]; // new way
+//
+// console.log(copyOfGroceries);
+// console.log(groceries);
+
+//Exercise 1
+// let numbers = [0,1,2,3,4,5,6,7,8,9];
+let sum = [0,1,2,3,4,5,6,7,8,9].reduce((a,b) => a+b,45);
+console.log(sum);
+//Exercise 2 Actors
+let actors = ["Jack Nicholson", "Luke Wilson", "Matt Damon"];
+actors.forEach((element, iterator) => {
+  console.log("The number "+ (iterator+1)+ " is "+ element);
+});
+// Exercise 3
+let characters = ["Mario", "Luigi", "Peach"];
+let copyOfCharacters = [...characters];
+copyOfCharacters.push("Bowser");
+console.log(characters);
+  </script>
+</body>
+</html>
