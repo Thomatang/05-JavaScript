@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //Exercise: Minimum and Maximum
+    let minNumber = Math.min(7, 5, -12, 6, 32, 18, 14, -2);
+    let maxNumber = Math.max(-3, 9, 21, 36, 27, 54, 17, 35);
+    let minMaxSum = minNumber + maxNumber ;
+    console.log(minNumber, maxNumber, minMaxSum);
+  //Exercise: Random 1
+  let floatBateau = 10.4;
+  let couleBateau = Math.floor(floatBateau);
+  let voleBatteau = Math.ceil(floatBateau);
+  console.log(floatBateau);
+  console.log(couleBateau);
+  console.log(voleBatteau);
+  //Exercise: Random 2
+  let random1 = Math.floor(Math.random()*51 + 50);
+  let random2 = Math.round(Math.random());
+  let random3 = Math.floor(Math.random()*11);
+
+  console.log(random1);
+  console.log(random2);
+  console.log(random3);
+//Exercise: Random 3
+let fighters = ["Goro","Ronald Reagan", "Kano", "Liu Kano", "Raiden", "Reptil","Scorpion","Shang Tsun", "Sonya", "Sub-Zero"];
+let randomNumber = Math.floor(Math.random()*fighters.length);
+console.log(fighters[randomNumber]);
+  </script>
+</body>
+</html>

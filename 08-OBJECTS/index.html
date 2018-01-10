@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  //EXERCISE 1 NPC
+    let Character = {
+      name: "John Valjohn",
+      age: 35,
+      items_to_give: ["food","water","avocadoes","bananas","baseball bat"],
+      giveItem : () => {
+        let randomNumber = Math.floor(Math.random()*Character.items_to_give.length);
+        console.log(Character.items_to_give[randomNumber]);
+      }
+    }
+    Character.giveItem(); // important to put CHaracter. in front of function
+    for ( let item in Character){
+      console.log(Character[item]);
+    }
+  //EXERCISE 2 SHOP
+    let itemsForSale=[
+      {
+        title: "sword",
+        physical: 15,
+        magic: 5,
+        minLevel: 10,
+        available: true,
+      },
+      {
+        title: "axe",
+        physical: 25,
+        magic: 1,
+        minLevel: 8,
+        available: false,
+      },
+      {
+        title: "shield",
+        physical: 15,
+        magic: 2,
+        minLevel: 5,
+        available: true,
+      },
+      {
+        title: "armour",
+        physical: 10,
+        magic: 3,
+        minLevel: 12,
+        available: false,
+      },
+      {
+        title: "bow & arrow",
+        physical: 15,
+        magic: 2,
+        minLevel: 11,
+        available: true,
+      }
+    ]
+    let displayAllItems = () => {
+      for ( let item in itemsForSale){
+        console.log(itemsForSale[item]);
+      }
+    }
+    let displayAvailableItems = () => {
+      for ( let i=0; i<itemsForSale.length; i++){
+        if (itemsForSale[i]["available"] === true){
+        console.log("This item is now available for sale: "+ itemsForSale[i]["title"]);
+        };
+      };
+    }
+    let displayMinimum10Items = () => {
+      for ( let i=0; i<itemsForSale.length; i++){
+        if (itemsForSale[i]["minLevel"] >= 10){
+        console.log("This item is now available for your level of experience: "+ itemsForSale[i]["title"]);
+        };
+      };
+    }
+    displayAllItems();
+    displayAvailableItems();
+    displayMinimum10Items();
+//EXERCISE 3 CHaracter
+let mainCharacter=
+  {
+    name: "John Valjohn",
+    level: 10,
+    life: 9,
+    weapon: {
+      name: "fantastick",
+      damage: 2,
+    },
+    attack: () => {
+      return(mainCharacter.name+ " attacks with the "+ mainCharacter.weapon.name+ ". The damages are "+ (mainCharacter.level * mainCharacter.weapon.damage))
+    }
+  }
+  console.log(mainCharacter.attack());
+
+  </script>
+</body>
+</html>

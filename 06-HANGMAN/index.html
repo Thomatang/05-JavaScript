@@ -10,25 +10,25 @@
   <script>
     let bonjourLetters = ["B","O", "N", "J", "O", "U", "R"]; // original array containing all letters
     let guessedLetters = ["","", "", "", "", "", ""]; // aka guessfield
-function guessLetter () {
-  while (bonjourLetters.toString()!==guessedLetters.toString()) {
-  let letterAttempt = prompt ("Type in any letter to guess the word, good luck!").toUpperCase();
-  if (bonjourLetters.includes(letterAttempt)) {  //  the includes method will check if the letter attempted is included in the array
-  for (let i=0; i < bonjourLetters.length ; i++) {
-    if (letterAttempt===bonjourLetters[i]) {
-      console.log("Well done!");
-      guessedLetters[i]=letterAttempt;
-      console.log("Letters correctly guessed so far:"+ guessedLetters);
-    }
-  }
-}
-  else {
-    console.log("Nope, try again");
-  }
-}
-  };
-guessLetter();
-console.log("Congratulations, you have found the word and finished the game")
+    function guessLetter () {
+      while (bonjourLetters.toString()!==guessedLetters.toString()) {
+        let letterAttempt = prompt ("Type in any letter to guess the word, good luck!").toUpperCase();
+          if (bonjourLetters.includes(letterAttempt)) {  //  the includes method will check if the letter attempted is included in the array
+            for (let i=0; i < bonjourLetters.length ; i++) {
+              if (letterAttempt===bonjourLetters[i]) {
+                console.log("Well done!");
+                guessedLetters[i]=letterAttempt;
+                console.log("Letters correctly guessed so far:"+ guessedLetters);
+              }
+            }
+          }
+          else {
+            console.log("Nope, try again");
+          }
+      }
+    };
+    guessLetter();
+    console.log("Congratulations, you have found the word and finished the game")
   </script>
 </body>
 </html>
