@@ -8,16 +8,52 @@
 </head>
 <body>
   <script>
+  //EXERCISE 1
+
+    // let getRandomInt = (minimum,maximum) => {
+    //   return Math.floor(Math.random()*(maximum-minimum)+minimum);
+    // }
+    //
+    // console.log(getRandomInt(minimum, maximum));
+
+    // THE PRICE IS RIGHT
     let message = "";
-    let numberOfAttempts = 5;
+    let numberOfAttempts = undefined;
     let minimum = 20;
     let maximum = 80;
 
-    let randomNumber = () => {
-      return Math.floor(Math.random()*60+20);
+    let getRandomInt = (minimum,maximum) => {
+      return Math.floor(Math.random()*(maximum-minimum)+minimum);
+    }
+    console.log(getRandomInt(minimum, maximum));
+
+    let number = getRandomInt(minimum, maximum);
+    console.log(number);
+
+    let rightPrice =() => {
+      let choice = prompt("Please choose a number between "+ minimum+ " and "+ maximum);
+      numberOfAttempts++;
+      if(choice!==null){
+        if (choice < minimum || choice > maximum){
+          alert("Yo, I said: please choose a number between "+ minimum+ " and "+ maximum);
+          rightPrice();
+        }
+        else if (choice > number){
+          alert("It's less");
+          rightPrice();
+        }
+        else if (choice < number) {
+          alert("It's more")
+          rightPrice();
+        }
+        else {
+          alert("Well done, you have found the answer in "+ numberOfAttempts + " attempts. Wanna play again?" )
+        }
+      }
     }
 
-    console.log(randomNumber());
+    rightPrice();
+
   </script>
 </body>
 </html>
