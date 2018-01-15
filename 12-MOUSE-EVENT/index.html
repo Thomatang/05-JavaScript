@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <title>Mouse Event</title>
+</head>
+<body onclick="onclick_page(event);">
+
+<h1>Mouse Event</h1>
+
+  <h2>EXERCICE 1</h2>
+<div class="hoverMe" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error molestiae culpa dolor corrupti dignissimos reprehenderit. Fugit dolore harum quod architecto quaerat dolor rem dignissimos, dolorem numquam repudiandae aliquid doloribus itaque.</div>
+<div class="hoverMe" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eaque quibusdam repellat voluptates quas illum, labore similique ipsam iste obcaecati id possimus, nulla veritatis, voluptatum animi dignissimos. Ipsam, placeat, vero? Facere.</div>
+<div class="hoverMe" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere iure, repellendus unde consequuntur magni quis sed dolore cupiditate sunt odio modi aperiam, rem expedita error ex! Necessitatibus pariatur exercitationem repellat.</div>
+
+<h2>EXERCICE 2</h2>
+<div id="reset">Click here and see</div>
+<h2>EXERCICE 3</h2>
+<div id="axe-x"></div>
+<div id="axe-y"></div>
+
+<script>
+
+let hoverMeDivs = document.querySelectorAll(".hoverMe");
+
+
+ for ( i=0; i < hoverMeDivs.length; i++) {
+   hoverMeDivs[i].addEventListener("mouseover", function(){
+     this.style.visibility = "hidden";
+   })
+   // IF you want to make the divs disappear when you hover on and reappear when you hover off, simply uncomment the following script
+   // hoverMeDivs[i].addEventListener("mouseout", function(){
+   //   this.style.visibility = "visible";
+   // })
+
+//EXERCISE 2
+ };
+ let clickEvent = document.getElementById("reset");
+ clickEvent.addEventListener("click", function(){
+   for (i=0; i<hoverMeDivs.length; i++) {
+     hoverMeDivs[i].style.visibility = "visible";
+   }
+ });
+
+ //EXERCISE 3
+  let xAxis = document.getElementById("axe-x");
+  let yAxis = document.getElementById("axe-y");
+
+   document.addEventListener("mousemove",function(event) {
+     let x = event.clientX;
+     let y = event.clientY;
+     xAxis.innerText = x;
+     yAxis.innerText = y;
+   });
+
+</script>
+</body>
+</html>
