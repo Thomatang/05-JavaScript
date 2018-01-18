@@ -27,13 +27,13 @@
 let hoverMeDivs = document.querySelectorAll(".hoverMe");
 
 
- for ( i=0; i < hoverMeDivs.length; i++) {
+ for ( let i=0; i < hoverMeDivs.length; i++) {
    hoverMeDivs[i].addEventListener("mouseover", function(){
      this.style.visibility = "hidden";
    })
    // IF you want to make the divs disappear when you hover on and reappear when you hover off, simply uncomment the following script
    // hoverMeDivs[i].addEventListener("mouseout", function(){
-   //   this.style.visibility = "visible";
+   //   this.style.opacity = "visible";
    // })
 
 //EXERCISE 2
@@ -49,9 +49,10 @@ let hoverMeDivs = document.querySelectorAll(".hoverMe");
   let xAxis = document.getElementById("axe-x");
   let yAxis = document.getElementById("axe-y");
 
-   document.addEventListener("mousemove",function(event) {
-     let x = event.clientX;
-     let y = event.clientY;
+   document.addEventListener("mousemove",function(iwantcandy) {
+     let x = iwantcandy.clientX;
+     console.log(iwantcandy);
+     let y = iwantcandy.clientY;
      xAxis.innerText = x;
      yAxis.innerText = y;
    });

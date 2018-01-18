@@ -5,10 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <style>
+
+		#character {
+
+			background-color: red;
+			margin: 20px;
+		}
+		#up, #down, #left, #right {
+			height: 100px;
+			width: 100px;
+			background-color: magenta;
+			float: left;
+			margin: 20px;
+			transition: all ease 0.3s;
+		}
+		.highlight {
+			opacity: 0.2;
+		}</style>
 </head>
 <body>
 
+<h1>EXERCISE 1</h1>
   <div id="character">
+    <p><strong>Instructions: </strong> Press either the h,j,k,l keys and see what happens to our dear red background color</p>
 
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt iste explicabo, in ad rem aspernatur sapiente, illum molestiae, cupiditate dolorum nisi maxime quasi aut modi blanditiis facilis accusantium voluptatum impedit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad maiores natus nesciunt, dolore repellendus eius. Consectetur veniam cumque omnis animi commodi cum sapiente illum, at necessitatibus. Blanditiis iusto, ex assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quam modi, consequatur ipsam
 
@@ -17,6 +37,15 @@
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt iste explicabo, in ad rem aspernatur sapiente, illum molestiae, cupiditate dolorum nisi maxime quasi aut modi blanditiis facilis accusantium voluptatum impedit.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad maiores natus nesciunt, dolore repellendus eius. Consectetur veniam cumque omnis animi commodi cum sapiente illum, at necessitatibus. Blanditiis iusto, ex assumenda.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quam modi, consequatur ipsam
 
   </div>
+<h1>Exercise 2</h1>
+<p><strong>Instructions:</strong> Use arrow keys and witness true magic</p>
+  <div>
+
+  		<div id="up"></div>
+  		<div id="down"></div>
+  		<div id="left"></div>
+  		<div id="right"></div>
+  	</div>
 
   <script>
 
@@ -25,22 +54,67 @@ let colorSwitch= document.getElementById("character");
 document.body.addEventListener('keypress', function(event){
   let keyName = event.key;
   switch(keyName) {
-    case 74:
-      colorSwitch.style.backgroundColor = "red";
+    case "h":
+      colorSwitch.style.backgroundColor = "blue";
       console.log("ça marche");
       break;
-    case 75:
-      colorSwitch.style.backgroundColor = "blue";
+    case "j":
+      colorSwitch.style.backgroundColor = "purple";
       break;
-      case 76:
-        colorSwitch.style.backgroundColor = "cyan";
-        console.log("ça marche");
-        break;
-        case 77:
-          colorSwitch.style.backgroundColor= "yellow";
-          console.log("ça marche");
-          break;
+    case "k":
+      colorSwitch.style.backgroundColor = "cyan";
+      console.log("ça marche");
+      break;
+    case "l":
+      colorSwitch.style.backgroundColor= "yellow";
+      console.log("ça marche");
+      break;
 }})
+
+
+
+// EXERCISE 2
+
+
+let up = document.getElementById('up');
+let down = document.getElementById('down');
+let left = document.getElementById('left');
+let right = document.getElementById('right');
+
+document.body.addEventListener('keydown', function(event){
+	let pressedKey = event.keyCode;
+	switch (pressedKey) {
+		case 38:
+			up.classList.add('highlight');
+			break;
+		case 40:
+			down.classList.add('highlight');
+			break;
+		case 37:
+			left.classList.add('highlight');
+			break;
+		case 39:
+			right.classList.add('highlight');
+			break;
+	}
+})
+document.body.addEventListener('keyup', function(){
+	let pressedKey = event.keyCode;
+	switch (pressedKey) {
+		case 38:
+			up.classList.remove('highlight');
+			break;
+		case 40:
+			down.classList.remove('highlight');
+			break;
+		case 37:
+			left.classList.remove('highlight');
+			break;
+		case 39:
+			right.classList.remove('highlight');
+			break;
+	}
+})
 
 
   </script>
